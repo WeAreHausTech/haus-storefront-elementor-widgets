@@ -1,0 +1,26 @@
+{
+  "name": "@haus-storefront-elementor-widgets/widgets-core",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build"
+  },
+  "main": "dist/bundle.es.js",
+  "types": "dist/bundle.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/bundle.es.js",
+      "types": "./dist/bundle.d.ts"
+    }
+  },
+  "dependencies": {
+    "@haus-storefront/core": "^1.0.5",
+    "@tanstack/react-query": "^5.74.3",
+    "@tanstack/react-query-devtools": "^5.74.3",
+    "@types/lodash": "^4.17.16",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.5.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

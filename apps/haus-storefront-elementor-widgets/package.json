@@ -1,8 +1,0 @@
-{
-  "name": "@haus-storefront-elementor-widgets/haus-storefront-elementor-widgets",
-  "version": "0.0.1",
-  "private": true,
-  "nx": {
-    "name": "haus-storefront-elementor-widgets"
-  }
-}

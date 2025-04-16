@@ -1,0 +1,12 @@
+{
+  "name": "haus-storefront-elementor-widgets/widgets-core",
+  "description": "Elementor widget one",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "HausStorefrontElementorWidgetsCore\\": "src/"
+    },
+    "files": [
+    ]
+  }
+}
