@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'b7ad78e617eaa3b15323b2d6fb6fe9e7' => $baseDir . '/init.php',
+    'e91f88484a8b76e29cc542f1696bf427' => $vendorDir . '/haus-storefront-elementor-widgets/add-to-cart-button/init.php',
 );

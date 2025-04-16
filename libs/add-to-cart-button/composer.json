@@ -1,7 +1,8 @@
 {
   "name": "haus-storefront-elementor-widgets/add-to-cart-button",
-  "description": "Elementor widget one",
-  "require": {},
+  "description": "Add-to-cart button widget for Elementor.",
+  "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "HausStorefrontElementorWidgets\\": "src/"
@@ -9,5 +10,9 @@
     "files": [
       "init.php"
     ]
-  }
+  },
+  "require": {
+    "php": ">=8.4"
+  },
+  "version": "1.0.0"
 }

@@ -1,0 +1,26 @@
+{
+  "name": "haus-storefront-elementor-widgets/elementor-widgets",
+  "description": "Monorepo for Elementor widgets.",
+  "type": "project",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "libs/add-to-cart-button",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "libs/widgets-core",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "require": {
+    "haus-storefront-elementor-widgets/add-to-cart-button": "*",
+    "haus-storefront-elementor-widgets/widgets-core": "*"
+  }
+}

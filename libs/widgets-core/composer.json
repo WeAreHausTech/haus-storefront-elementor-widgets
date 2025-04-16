@@ -1,12 +1,15 @@
 {
   "name": "haus-storefront-elementor-widgets/widgets-core",
-  "description": "Elementor widget one",
-  "require": {},
+  "description": "Core functionality for Elementor widgets.",
+  "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "HausStorefrontElementorWidgetsCore\\": "src/"
-    },
-    "files": [
-    ]
-  }
+    }
+  },
+  "require": {
+    "php": ">=8.4"
+  },
+  "version": "1.0.0"
 }

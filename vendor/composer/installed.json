@@ -1,0 +1,67 @@
+{
+    "packages": [
+        {
+            "name": "haus-storefront-elementor-widgets/add-to-cart-button",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "libs/add-to-cart-button",
+                "reference": "069eb79affcbc92fa22987174f674e9287f7b9b4"
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "HausStorefrontElementorWidgets\\": "src/"
+                },
+                "files": [
+                    "init.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Add-to-cart button widget for Elementor.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../haus-storefront-elementor-widgets/add-to-cart-button"
+        },
+        {
+            "name": "haus-storefront-elementor-widgets/widgets-core",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "libs/widgets-core",
+                "reference": "4c8830cea2e2223add55a0e882cb5ac3e8b7c6eb"
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "HausStorefrontElementorWidgetsCore\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Core functionality for Elementor widgets.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../haus-storefront-elementor-widgets/widgets-core"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

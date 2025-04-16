@@ -1,0 +1,74 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a3764cb9a648f5a74c75bbc6f2323b76",
+    "packages": [
+        {
+            "name": "haus-storefront-elementor-widgets/add-to-cart-button",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "libs/add-to-cart-button",
+                "reference": "069eb79affcbc92fa22987174f674e9287f7b9b4"
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HausStorefrontElementorWidgets\\": "src/"
+                },
+                "files": [
+                    "init.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Add-to-cart button widget for Elementor.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "haus-storefront-elementor-widgets/widgets-core",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "libs/widgets-core",
+                "reference": "4c8830cea2e2223add55a0e882cb5ac3e8b7c6eb"
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HausStorefrontElementorWidgetsCore\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Core functionality for Elementor widgets.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}
