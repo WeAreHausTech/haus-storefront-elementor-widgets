@@ -1356,7 +1356,7 @@
     "@eslint/core" "^0.12.0"
     levn "^0.4.1"
 
-"@haus-storefront/add-to-cart-btn@^1.0.5":
+"@haus-storefront/add-to-cart-btn@1.0.5":
   version "1.0.5"
   resolved "http://localhost:4873/@haus-storefront/add-to-cart-btn/-/add-to-cart-btn-1.0.5.tgz#c692fcfb045592d936db64dde1d7bf52a163cf05"
   integrity sha512-IEdXUXGOE35QwjKBTQ/OI2knjs600RO+gbrnu9ZqZV8LYquvrqnw0GI03lDAR3LhJfA/RQf//W4eg6YOJksliA==
@@ -1366,7 +1366,7 @@
     i18next "^24.2.2"
     react-i18next "^15.4.0"
 
-"@haus-storefront/core@1.0.5", "@haus-storefront/core@^1.0.5":
+"@haus-storefront/core@1.0.5":
   version "1.0.5"
   resolved "http://localhost:4873/@haus-storefront/core/-/core-1.0.5.tgz#fca3c4ab3a30f7f9671179dceada55e1560c2bdf"
   integrity sha512-upZodu/plYtjMlvFWKIHvYS7vvmGvq7VsQMN6o/yDGDB88Xt2ybvHK8s/JmC7k785F4MUiAnhX22JDLH2XhmKA==
