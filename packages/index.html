@@ -47,29 +47,26 @@
                 const packagesList = document.getElementById('packages-list');
                 const packages = data.packages;
 
-                // Create a sorted list of packages and versions
-                const sortedPackages = Object.entries(packages).flatMap(([packageName, versions]) => {
-                    return Object.entries(versions).map(([version, details]) => ({
-                        name: packageName,
-                        version: version,
-                        url: details.dist.url
-                    }));
-                }).sort((a, b) => {
-                    if (a.name === b.name) {
-                        return a.version.localeCompare(b.version, undefined, { numeric: true });
-                    }
-                    return a.name.localeCompare(b.name);
-                });
+                // Group packages by name and sort versions
+                Object.entries(packages).forEach(([packageName, versions]) => {
+                    const packageItem = document.createElement('li');
+                    const packageTitle = document.createElement('strong');
+                    packageTitle.textContent = packageName;
+                    packageItem.appendChild(packageTitle);
 
-                // Render the sorted packages
-                sortedPackages.forEach(pkg => {
-                    const listItem = document.createElement('li');
-                    const link = document.createElement('a');
-                    link.href = pkg.url;
-                    link.textContent = `${pkg.name} (${pkg.version})`;
-                    link.download = '';
-                    listItem.appendChild(link);
-                    packagesList.appendChild(listItem);
+                    const versionList = document.createElement('ul');
+                    Object.keys(versions).sort((a, b) => a.localeCompare(b, undefined, { numeric: true })).forEach(version => {
+                        const versionItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = versions[version].dist.url;
+                        link.textContent = version;
+                        link.download = '';
+                        versionItem.appendChild(link);
+                        versionList.appendChild(versionItem);
+                    });
+
+                    packageItem.appendChild(versionList);
+                    packagesList.appendChild(packageItem);
                 });
             })
             .catch(error => {
