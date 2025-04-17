@@ -1,0 +1,19 @@
+{
+  "name": "test-widget",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/libs/test-widget",
+        "configFile": "libs/test-widget/vite.config.js"
+      }
+    },
+    "package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd libs/test-widget && zip -r ../../dist/libs/test-widget/test-widget.zip *"
+      },
+      "dependsOn": ["build"]
+    }
+  }
+}
