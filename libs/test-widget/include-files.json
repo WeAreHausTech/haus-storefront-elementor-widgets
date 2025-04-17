@@ -8,7 +8,7 @@
     "tsconfig.lib.json",
     "vite.config.js",
     "src/",
-    "vendor/",
+    "vendor/", 
     "dist/"
   ]
 }
