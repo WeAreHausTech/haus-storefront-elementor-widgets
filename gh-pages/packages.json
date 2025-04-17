@@ -10,7 +10,7 @@
           "reference": "add-to-cart-button-v1.0.1"
         },
         "dist": {
-          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/archive/add-to-cart-button-v1.0.1.zip",
+          "url": "https://wearehaustech.github.io/haus-storefront-elementor-widgets/add-to-cart-button-v1.0.1.zip",
           "type": "zip"
         },
         "require": {
@@ -18,7 +18,7 @@
         },
         "autoload": {
           "psr-4": {
-            "HausStorefrontElementorWidgets\\": "libs/add-to-cart-button/src/"
+            "HausStorefrontElementorWidgets\\": "src/"
           }
         }
       }
@@ -33,7 +33,7 @@
           "reference": "widgets-core-v1.0.1"
         },
         "dist": {
-          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/archive/widgets-core-v1.0.1.zip",
+          "url": "https://wearehaustech.github.io/haus-storefront-elementor-widgets/widgets-core-v1.0.1.zip",
           "type": "zip"
         },
         "require": {
@@ -41,7 +41,7 @@
         },
         "autoload": {
           "psr-4": {
-            "HausStorefrontElementorWidgetsCore\\": "libs/widgets-core/src/"
+            "HausStorefrontElementorWidgetsCore\\": "src/"
           }
         }
       }
