@@ -1,0 +1,50 @@
+name: Publish Widget
+
+on:
+  workflow_dispatch:
+    inputs:
+      widget:
+        description: 'Widget to publish (e.g., add-to-cart-button or widgets-core)'
+        required: true
+        default: 'add-to-cart-button'
+      version:
+        description: 'Version to publish (e.g., 1.0.3)'
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install jq
+      run: sudo apt-get install -y jq
+
+    - name: Create zip file for the widget
+      run: |
+        WIDGET_NAME=${{ github.event.inputs.widget }}
+        VERSION=${{ github.event.inputs.version }}
+        WIDGET_DIR=libs/$WIDGET_NAME
+        ZIP_FILE=${WIDGET_NAME}-v${VERSION}.zip
+
+        echo "Creating zip for $WIDGET_NAME version $VERSION..."
+
+        # Read include-files.json and zip the specified files
+        cd $WIDGET_DIR
+        zip -r ../../$ZIP_FILE $(jq -r ".\"$WIDGET_NAME\"[]" include-files.json)
+        echo "Zip created: $ZIP_FILE"
+
+    - name: Upload release asset
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ github.event.inputs.upload_url }}
+        asset_path: ${{ github.workspace }}/${{ github.event.inputs.widget }}-v${{ github.event.inputs.version }}.zip
+        asset_name: ${{ github.event.inputs.widget }}-v${{ github.event.inputs.version }}.zip
+        asset_content_type: application/zip

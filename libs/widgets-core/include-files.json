@@ -1,0 +1,14 @@
+{
+  "widgets-core": [
+    "composer.json",
+    "composer.lock",
+    "init.php",
+    "package.json",
+    "tsconfig.json",
+    "tsconfig.lib.json",
+    "vite.config.js",
+    "src/",
+    "vendor/",
+    "dist/"
+  ]
+}
