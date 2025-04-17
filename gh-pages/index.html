@@ -47,17 +47,30 @@
                 const packagesList = document.getElementById('packages-list');
                 const packages = data.packages;
 
-                for (const [packageName, versions] of Object.entries(packages)) {
-                    for (const [version, details] of Object.entries(versions)) {
-                        const listItem = document.createElement('li');
-                        const link = document.createElement('a');
-                        link.href = details.dist.url;
-                        link.textContent = `${details.name} (${version})`;
-                        link.download = '';
-                        listItem.appendChild(link);
-                        packagesList.appendChild(listItem);
+                // Create a sorted list of packages and versions
+                const sortedPackages = Object.entries(packages).flatMap(([packageName, versions]) => {
+                    return Object.entries(versions).map(([version, details]) => ({
+                        name: packageName,
+                        version: version,
+                        url: details.dist.url
+                    }));
+                }).sort((a, b) => {
+                    if (a.name === b.name) {
+                        return a.version.localeCompare(b.version, undefined, { numeric: true });
                     }
-                }
+                    return a.name.localeCompare(b.name);
+                });
+
+                // Render the sorted packages
+                sortedPackages.forEach(pkg => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = pkg.url;
+                    link.textContent = `${pkg.name} (${pkg.version})`;
+                    link.download = '';
+                    listItem.appendChild(link);
+                    packagesList.appendChild(listItem);
+                });
             })
             .catch(error => {
                 console.error('Error loading packages:', error);
