@@ -1,0 +1,21 @@
+{
+  "name": "test-widget",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build"
+  },
+  "main": "dist/bundle.es.js",
+  "types": "dist/bundle.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/bundle.es.js",
+      "types": "./dist/bundle.d.ts"
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "ts-loader": "^9.5.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
