@@ -26,6 +26,8 @@ jobs:
 
     - name: Install dependencies
       run: |
+        WIDGET_NAME=${{ github.event.inputs.widget }}
+        cd libs/$WIDGET_NAME
         yarn install
 
     - name: Build the widget
