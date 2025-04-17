@@ -8,6 +8,8 @@ import { useProductDetail } from '@haus-storefront/hooks';
 
 const AddToCartButtonWidget = () => {
   const { data: product } = useProductDetail({ id: '2' });
+
+  console.log('AddToCartButtonWidget', product);
   const emitSelectedProductVariant = useEventBusEmit(
     productChannel,
     'product:variant:selected'

@@ -19,7 +19,10 @@
         "autoload": {
           "psr-4": {
             "HausStorefrontElementorWidgets\\": "src/"
-          }
+          }, 
+          "files": [
+            "init.php"
+          ]
         }
       }
     },
