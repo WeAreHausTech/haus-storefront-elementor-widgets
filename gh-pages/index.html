@@ -1,10 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Composer Repository</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Composer Repository</h1>
-    <p>This is a Composer repository hosted on GitHub Pages.</p>
+    <h1>Available Packages</h1>
+    <ul id="packages-list">
+        <!-- Packages will be dynamically loaded here -->
+    </ul>
+
+    <script>
+        // Fetch the packages.json file dynamically
+        fetch('packages.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load packages.json');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const packagesList = document.getElementById('packages-list');
+                const packages = data.packages;
+
+                for (const [packageName, versions] of Object.entries(packages)) {
+                    for (const [version, details] of Object.entries(versions)) {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = details.dist.url;
+                        link.textContent = `${details.name} (${version})`;
+                        link.download = '';
+                        listItem.appendChild(link);
+                        packagesList.appendChild(listItem);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error loading packages:', error);
+            });
+    </script>
 </body>
 </html>
