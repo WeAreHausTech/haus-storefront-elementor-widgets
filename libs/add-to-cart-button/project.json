@@ -12,7 +12,7 @@
       "options": {
         "command": "cd libs/add-to-cart-button zip -r ../../dist/libs/add-to-cart-button/add-to-cart-button-v1.0.0.zip *"
       },
-      "dependsOn": ["prebuild", "build"]
+      "dependsOn": ["prebuild", "^build"]
     }
   }
 }

@@ -1,13 +1,6 @@
 {
   "name": "widgets-core",
   "targets": {
-    "build": {
-      "executor": "@nx/vite:build",
-      "options": {
-        "outputPath": "dist/libs/widgets-core",
-        "configFile": "libs/widgets-core/vite.config.js"
-      }
-    },
     "package": {
       "executor": "nx:run-commands",
       "options": {
