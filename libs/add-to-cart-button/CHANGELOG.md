@@ -1,3 +1,17 @@
+## 2.8.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **release.yml, nx.json:** update tag extraction logic and change release tag pattern to use '-' instead of ':' ([b579062](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/b579062))
+
+### 🧱 Updated Dependencies
+
+- Updated widgets-core to 2.8.0
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.7.0 (2025-04-22)
 
 ### 🚀 Features
