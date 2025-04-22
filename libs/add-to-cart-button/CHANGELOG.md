@@ -1,3 +1,13 @@
+## 2.11.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **README.md:** update release command to specify projects for clarity ([92f4b1c](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/92f4b1c))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.10.0 (2025-04-22)
 
 ### 🩹 Fixes
