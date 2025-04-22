@@ -1,8 +1,11 @@
-name: Release Add-to-Cart Button
+name: Build and Release Widget
 
 on:
   workflow_dispatch:
     inputs:
+      widget:
+        description: 'Widget to release (e.g., add-to-cart-button or widgets-core)'
+        required: true
       version:
         description: 'Release version (e.g., v1.0.0)'
         required: true
@@ -21,16 +24,17 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
-      - name: Build the library
-        run: npx nx run add-to-cart-button:package
+      - name: Build and package the widget
+        run: |
+          npx nx run ${{ github.event.inputs.widget }}:package
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.version }}
           name: Release ${{ github.event.inputs.version }}
-          files: dist/libs/add-to-cart-button/add-to-cart-button-${{ github.event.inputs.version }}.zip
+          files: dist/libs/${{ github.event.inputs.widget }}/${{ github.event.inputs.widget }}{{ github.event.inputs.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
