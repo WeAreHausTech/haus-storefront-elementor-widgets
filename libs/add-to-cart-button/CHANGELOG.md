@@ -1,3 +1,7 @@
+## 2.16.0 (2025-04-22)
+
+This was a version bump only for add-to-cart-button to align it with other projects, there were no code changes.
+
 ## 2.15.0 (2025-04-22)
 
 ### 🚀 Features
