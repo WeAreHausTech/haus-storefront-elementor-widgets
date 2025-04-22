@@ -1,6 +1,6 @@
 {
   "name": "@haus-storefront-elementor-widgets/widgets-core",
-  "version": "2.9.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "vite build"
   },
