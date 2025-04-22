@@ -72,7 +72,7 @@ jobs:
           DIST_URL="https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download/${TAG_NAME}/${WIDGET}-${VERSION}.zip"
 
           # Update packages.json with the new release
-          jq ".packages[\"haus-storefront-elementor-widgets/${WIDGET}\"] += { \"${VERSION}\": { \"name\": \"haus-storefront-elementor-widgets/${WIDGET}\", \"version\": \"${VERSION}\", \"source\": { \"url\": \"https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git\", \"type\": \"git\", \"reference\": \"${TAG_NAME}\" }, \"dist\": { \"url\": \"${DIST_URL}\", \"type\": \"zip\" }, \"require\": { \"php\": \"^8.1\" }, \"autoload\": { \"psr-4\": { \"HausStorefrontElementorWidgets\\\": \"src/\" } } } }" $PACKAGES_JSON > tmp.json && mv tmp.json $PACKAGES_JSON
+          jq ".packages[\"haus-storefront-elementor-widgets/${WIDGET}\"] += { \"${VERSION}\": { \"name\": \"haus-storefront-elementor-widgets/${WIDGET}\", \"version\": \"${VERSION}\", \"source\": { \"url\": \"https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git\", \"type\": \"git\", \"reference\": \"${TAG_NAME}\" }, \"dist\": { \"url\": \"${DIST_URL}\", \"type\": \"zip\" }, \"require\": { \"php\": \"^8.1\" }, \"autoload\": { \"psr-4\": { \"HausStorefrontElementorWidgets\\\\\": \"src/\" } } } }" $PACKAGES_JSON > tmp.json && mv tmp.json $PACKAGES_JSON
 
           # Commit and push the updated packages.json
           git config user.name "GitHub Actions"
