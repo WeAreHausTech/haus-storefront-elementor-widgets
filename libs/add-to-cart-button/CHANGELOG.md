@@ -1,3 +1,13 @@
+## 2.12.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **nx.json:** update git push command to include both push and push --tags ([ee5e22d](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/ee5e22d))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.11.0 (2025-04-22)
 
 ### 🩹 Fixes
