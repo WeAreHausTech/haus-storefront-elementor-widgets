@@ -73,7 +73,6 @@ class AddToCartButtonWidget extends Widget_Base
         $content = file_get_contents($distPath . '.vite/manifest.json');
         $content = json_decode($content, true);
         $script = $content["src/index.tsx"]["file"];
-
         $file = $distPath . $script;
 
         wp_enqueue_script(
