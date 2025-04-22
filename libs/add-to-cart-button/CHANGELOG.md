@@ -1,3 +1,13 @@
+## 2.13.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **release.yml): add check for ZIP file existence before creating GitHub release fix(nx.json:** correct commit message format for releases ([b9b303a](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/b9b303a))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.12.0 (2025-04-22)
 
 ### 🩹 Fixes
