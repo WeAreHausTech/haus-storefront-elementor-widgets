@@ -1,3 +1,20 @@
+## 2.9.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **README.md:** clarify steps for creating a new version and triggering GitHub workflow ([0bdfd2a](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/0bdfd2a))
+- **release.yml:** update release name format to include widget and version ([b46f2a6](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/b46f2a6))
+- **release.yml, nx.json:** update tag extraction logic to use '@' for widget and version separation ([ba24422](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/ba24422))
+- **release.yml, nx.json:** update tag extraction logic and change release tag pattern to use '-' instead of ':' ([b579062](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/b579062))
+
+### 🧱 Updated Dependencies
+
+- Updated widgets-core to 2.9.0
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.8.0 (2025-04-22)
 
 ### 🩹 Fixes
