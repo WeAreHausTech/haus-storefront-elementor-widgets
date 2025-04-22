@@ -23,14 +23,25 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build the library
+      - name: Build and package the widget
         run: npx nx run add-to-cart-button:package
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: widget-zip
+          path: dist/libs/${{ github.event.inputs.widget }}/*.zip
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: widget-zip
+          path: .
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.version }}
           name: Release ${{ github.event.inputs.version }}
-          files: dist/libs/add-to-cart-button/add-to-cart-button-${{ github.event.inputs.version }}.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          files: ./*.zip
+
