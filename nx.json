@@ -65,7 +65,7 @@
     },
     "nx-release-publish": {
       "options": {
-        "command": "git push --tags"
+        "command": "git push && git push --tags"
       },
       "executor": "nx:run-commands"
     }
