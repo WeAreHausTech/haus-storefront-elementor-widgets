@@ -6,7 +6,7 @@
       "options": {
         "command": "mkdir -p dist/add-to-cart-button && cd libs/add-to-cart-button && zip -r ../../dist/add-to-cart-button/add-to-cart-button-v1.0.0.zip *"
       },
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     }
   }
 }
