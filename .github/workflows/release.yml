@@ -73,6 +73,9 @@ jobs:
       - name: Update packages.json
         if: ${{ github.event_name == 'push' }}
         run: |
+          TAG_NAME=${{ github.ref_name }}
+          WIDGET=$(echo "$TAG_NAME" | cut -d'@' -f1)
+          VERSION=$(echo "$TAG_NAME" | cut -d'@' -f2)
           # Path to packages.json
           PACKAGES_JSON=packages/packages.json
 
