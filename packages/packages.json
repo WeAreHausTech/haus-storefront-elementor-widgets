@@ -19,7 +19,7 @@
         "autoload": {
           "psr-4": {
             "HausStorefrontElementorWidgets\\": "src/"
-          }, 
+          },
           "files": [
             "init.php"
           ]
@@ -69,6 +69,29 @@
         "autoload": {
           "psr-4": {
             "HausStorefrontElementorWidgetsCore\\": "src/"
+          }
+        }
+      }
+    },
+    "haus-storefront-elementor-widgets/": {
+      "": {
+        "name": "haus-storefront-elementor-widgets/",
+        "version": "",
+        "source": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git",
+          "type": "git",
+          "reference": ""
+        },
+        "dist": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download//-.zip",
+          "type": "zip"
+        },
+        "require": {
+          "php": "^8.1"
+        },
+        "autoload": {
+          "psr-4": {
+            "HausStorefrontElementorWidgets\\": "src/"
           }
         }
       }
