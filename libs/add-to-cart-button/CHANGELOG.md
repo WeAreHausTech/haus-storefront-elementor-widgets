@@ -1,3 +1,9 @@
+## 2.3.0 (2025-04-22)
+
+### 🧱 Updated Dependencies
+
+- Updated widgets-core to 2.3.0
+
 ## 2.2.0 (2025-04-22)
 
 ### 🧱 Updated Dependencies
