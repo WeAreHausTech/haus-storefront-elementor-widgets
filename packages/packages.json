@@ -48,6 +48,27 @@
             "init.php"
           ]
         }
+      },
+      "v2.17.0": {
+        "name": "haus-storefront-elementor-widgets/add-to-cart-button",
+        "version": "v2.17.0",
+        "source": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git",
+          "type": "git",
+          "reference": "add-to-cart-button@v2.17.0"
+        },
+        "dist": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download/add-to-cart-button@v2.17.0/add-to-cart-button-v2.17.0.zip",
+          "type": "zip"
+        },
+        "require": {
+          "php": "^8.1"
+        },
+        "autoload": {
+          "psr-4": {
+            "HausStorefrontElementorWidgets\\": "src/"
+          }
+        }
       }
     },
     "haus-storefront-elementor-widgets/widgets-core": {
