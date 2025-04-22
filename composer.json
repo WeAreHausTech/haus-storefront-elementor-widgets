@@ -18,17 +18,9 @@
         "symlink": true
       }
     }
-    {
-      "type": "path",
-      "url": "libs/test-widget",
-      "options": {
-        "symlink": true
-      }
-    }
   ],
   "require": {
     "haus-storefront-elementor-widgets/add-to-cart-button": "*",
-    "haus-storefront-elementor-widgets/widgets-core": "*",
-    "haus-storefront-elementor-widgets/test-widget": "*",
+    "haus-storefront-elementor-widgets/widgets-core": "*"
   }
 }
