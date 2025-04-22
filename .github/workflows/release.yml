@@ -35,6 +35,6 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.version }}
           name: Release ${{ github.event.inputs.version }}
-          files: dist/libs/${{ github.event.inputs.widget }}/${{ github.event.inputs.widget }}{{ github.event.inputs.version }}.zip
+          files: dist/libs/${{ github.event.inputs.widget }}/${{ github.event.inputs.widget }}-${{ github.event.inputs.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
