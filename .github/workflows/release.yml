@@ -24,10 +24,10 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build and package the widget
-        run: npx nx run add-to-cart-button:package
+        run: npx nx run add-to-cart-button:package 
 
       - name: Debug - List workspace contents
-        run: ls -R
+        run: cd dist && ls -R
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
