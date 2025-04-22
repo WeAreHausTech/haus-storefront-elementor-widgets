@@ -53,7 +53,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.widget || env.widget }}-${{ github.event.inputs.version || env.version }}
-          name: Release ${{ github.event.inputs.version || env.version }}
+          name: ${{ github.event.inputs.widget || env.widget }}-${{ github.event.inputs.version || env.version }}
           files: dist/libs/${{ github.event.inputs.widget || env.widget }}/${{ github.event.inputs.widget || env.widget }}-${{ github.event.inputs.version || env.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
