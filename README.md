@@ -2,7 +2,7 @@
 
 # Publishing a New Package
 
-## Create new version and tag
+## Create new version
 This will create a new version, tag and update release notes. 
 
 ```bash
