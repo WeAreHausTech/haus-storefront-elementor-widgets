@@ -91,7 +91,7 @@
   "release": {
     "projectsRelationship": "independent",
     "projects": ["libs/*"],
-    "releaseTagPattern": "{projectName}@{version}",
+    "releaseTagPattern": "{projectName}:{version}",
     "changelog": {
       "projectChangelogs": true
     },

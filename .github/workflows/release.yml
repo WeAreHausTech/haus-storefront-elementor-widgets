@@ -26,8 +26,8 @@ jobs:
         id: extract
         run: |
           TAG_NAME=${{ github.ref_name }}
-          WIDGET=$(echo "$TAG_NAME" | cut -d'@' -f1)
-          VERSION=$(echo "$TAG_NAME" | cut -d'@' -f2)
+          WIDGET=$(echo "$TAG_NAME" | cut -d':' -f1)
+          VERSION=$(echo "$TAG_NAME" | cut -d':' -f2)
           echo "widget=$WIDGET" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_ENV
 
