@@ -1,3 +1,13 @@
+## 2.17.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **release.yml:** extract widget and version from tag for packages.json update ([11faf09](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/11faf09))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.16.0 (2025-04-22)
 
 This was a version bump only for add-to-cart-button to align it with other projects, there were no code changes.
