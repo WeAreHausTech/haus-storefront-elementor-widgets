@@ -13,10 +13,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    
     "paths": {
-      "@haus-storefront-elementor-widgets/widgets-core": ["libs/widgets-core/src/index.ts"],
-      "@haus-storefront-elementor-widgets/add-to-cart-button": ["libs/add-to-cart-button/src/index.tsx"],
+      "@haus-storefront-elementor-widgets/add-to-cart-button": [
+        "libs/add-to-cart-button/src/index.tsx"
+      ],
+      "@haus-storefront-elementor-widgets/widgets-core": [
+        "libs/widgets-core/src/index.ts"
+      ]
     }
   }
 }
