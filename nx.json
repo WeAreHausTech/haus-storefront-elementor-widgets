@@ -103,7 +103,7 @@
       "push": true,
       "pushTags": false,
       "commit": true,
-      "commitMessage": "chore(projectName): release {version}",
+      "commitMessage": "chore({projectName}): release {version}",
       "tagName": "{projectName}-{version}",
       "tagMessage": "Release {version}"
     }
