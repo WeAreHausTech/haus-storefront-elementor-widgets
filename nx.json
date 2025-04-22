@@ -64,10 +64,10 @@
       "dependsOn": ["^build", "^build", "^build"]
     },
     "nx-release-publish": {
-      "dependsOn": ["build"],
       "options": {
-        "packageRoot": "dist/libs/{projectName}"
-      }
+        "command": "git push --tags"
+      },
+      "executor": "nx:run-commands"
     }
   },
   "generators": {
@@ -96,12 +96,12 @@
       "projectChangelogs": true
     },
     "version": {
-      "conventionalCommits": true
+      "preVersionCommand": "nx run-many --target=build --all"
     },
     "git": {
       "tag": true,
       "push": true,
-      "pushTags": true,
+      "pushTags": false,
       "commit": true,
       "commitMessage": "chore(projectName): release {version}",
       "tagName": "{projectName}-{version}",
