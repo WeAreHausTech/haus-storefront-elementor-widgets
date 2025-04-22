@@ -27,13 +27,13 @@ jobs:
         run: npx nx run add-to-cart-button:package
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: widget-zip
           path: dist/libs/${{ github.event.inputs.widget }}/*.zip
 
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: widget-zip
           path: .
