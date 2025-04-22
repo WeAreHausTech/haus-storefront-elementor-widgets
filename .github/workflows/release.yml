@@ -49,6 +49,18 @@ jobs:
         run: |
           npx nx run ${{ github.event.inputs.widget || env.widget }}:package
 
+      - name: Check if ZIP file exists
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          # Path to the expected ZIP file
+          ZIP_FILE=dist/libs/${{ env.widget }}/${{ env.widget }}-${{ env.version }}.zip
+
+          # Check if the ZIP file exists
+          if [ ! -f "$ZIP_FILE" ]; then
+            echo "Error: ZIP file $ZIP_FILE has not been created Aborting release."
+            exit 1
+          fi
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:

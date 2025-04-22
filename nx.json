@@ -91,7 +91,7 @@
   "release": {
     "projectsRelationship": "independent",
     "projects": ["libs/*"],
-    "releaseTagPattern": "{projectName}@{version}",
+    "releaseTagPattern": "{projectName}@v{version}",
     "changelog": {
       "projectChangelogs": true
     },
@@ -104,7 +104,7 @@
       "pushTags": false,
       "commit": true,
       "commitMessage": "chore({projectName}): release {version}",
-      "tagName": "{projectName}-{version}",
+      "tagName": "{projectName}@v{version}",
       "tagMessage": "Release {version}"
     }
   }

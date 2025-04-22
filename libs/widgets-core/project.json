@@ -4,7 +4,7 @@
     "package": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cd libs/widgets-core && zip -r ../../dist/libs/widgets-core/widgets-core-v1.0.0.zip *"
+        "command": "cd libs/widgets-core && VERSION=$(node -p \"require('./package.json').version\") && zip -r ../../dist/libs/widgets-core/widgets-core-v$VERSION.zip *"
       },
       "dependsOn": ["build"]
     }
