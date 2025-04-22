@@ -1,3 +1,13 @@
+## 2.10.0 (2025-04-22)
+
+### 🩹 Fixes
+
+- **release.yml:** escape backslash in autoload PSR-4 namespace for JSON update ([d9ddade](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/d9ddade))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 2.9.0 (2025-04-22)
 
 ### 🩹 Fixes
