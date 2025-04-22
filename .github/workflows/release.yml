@@ -9,6 +9,9 @@ on:
       version:
         description: 'Release version (e.g., v1.0.0)'
         required: true
+  push:
+    tags:
+      - "*" 
 
 jobs:
   release:
@@ -17,6 +20,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Extract widget and version from tag
+        if: ${{ github.event_name == 'push' }}
+        id: extract
+        run: |
+          TAG_NAME=${{ github.ref_name }}
+          WIDGET=$(echo "$TAG_NAME" | cut -d'-' -f1)
+          VERSION=$(echo "$TAG_NAME" | cut -d'-' -f2-)
+          echo "widget=$WIDGET" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_ENV
+
+      - name: Debug extracted values
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          echo "Widget: ${{ env.widget }}"
+          echo "Version: ${{ env.version }}"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -28,13 +47,13 @@ jobs:
 
       - name: Build and package the widget
         run: |
-          npx nx run ${{ github.event.inputs.widget }}:package
+          npx nx run ${{ github.event.inputs.widget || env.widget }}:package
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.inputs.widget }}-${{ github.event.inputs.version }}
-          name: Release ${{ github.event.inputs.version }}
-          files: dist/libs/${{ github.event.inputs.widget }}/${{ github.event.inputs.widget }}-${{ github.event.inputs.version }}.zip
+          tag_name: ${{ github.event.inputs.widget || env.widget }}-${{ github.event.inputs.version || env.version }}
+          name: Release ${{ github.event.inputs.version || env.version }}
+          files: dist/libs/${{ github.event.inputs.widget || env.widget }}/${{ github.event.inputs.widget || env.widget }}-${{ github.event.inputs.version || env.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
