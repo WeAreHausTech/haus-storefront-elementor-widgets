@@ -57,3 +57,26 @@ jobs:
           files: dist/libs/${{ github.event.inputs.widget || env.widget }}/${{ github.event.inputs.widget || env.widget }}-${{ github.event.inputs.version || env.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update packages.json
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          TAG_NAME=${{ github.ref_name }}
+          WIDGET=$(echo "$TAG_NAME" | cut -d':' -f1)
+          VERSION=$(echo "$TAG_NAME" | cut -d':' -f2)
+
+          # Path to packages.json
+          PACKAGES_JSON=packages/packages.json
+
+          # Extract the dist URL for the new release
+          DIST_URL="https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download/${TAG_NAME}/${WIDGET}-${VERSION}.zip"
+
+          # Update packages.json with the new release
+          jq ".packages[\"haus-storefront-elementor-widgets/${WIDGET}\"] += { \"${VERSION}\": { \"name\": \"haus-storefront-elementor-widgets/${WIDGET}\", \"version\": \"${VERSION}\", \"source\": { \"url\": \"https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git\", \"type\": \"git\", \"reference\": \"${TAG_NAME}\" }, \"dist\": { \"url\": \"${DIST_URL}\", \"type\": \"zip\" }, \"require\": { \"php\": \"^8.1\" }, \"autoload\": { \"psr-4\": { \"HausStorefrontElementorWidgets\\\": \"src/\" } } } }" $PACKAGES_JSON > tmp.json && mv tmp.json $PACKAGES_JSON
+
+          # Commit and push the updated packages.json
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add $PACKAGES_JSON
+          git commit -m "chore: update packages.json for ${WIDGET}:${VERSION}"
+          git push
