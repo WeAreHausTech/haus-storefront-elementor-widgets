@@ -5,7 +5,7 @@
 ## Create new version
 
 ```bash
-    yarn nx release
+    yarn nx release --projects=widget
 ```
 
 This will:
