@@ -62,6 +62,12 @@
   "targetDefaults": {
     "test": {
       "dependsOn": ["^build", "^build", "^build"]
+    },
+    "nx-release-publish": {
+      "dependsOn": ["build"],
+      "options": {
+        "packageRoot": "dist/libs/{projectName}"
+      }
     }
   },
   "generators": {
@@ -80,6 +86,26 @@
         "linter": "eslint",
         "unitTestRunner": "vitest"
       }
+    }
+  },
+  "release": {
+    "projectsRelationship": "independent",
+    "projects": ["libs/*"],
+    "releaseTagPattern": "{projectName}-{version}",
+    "changelog": {
+      "projectChangelogs": true
+    },
+    "version": {
+      "conventionalCommits": true
+    },
+    "git": {
+      "tag": true,
+      "push": true,
+      "pushTags": true,
+      "commit": true,
+      "commitMessage": "chore(projectName): release {version}",
+      "tagName": "{projectName}-{version}",
+      "tagMessage": "Release {version}"
     }
   }
 }
