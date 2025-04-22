@@ -13,7 +13,7 @@
     }
   },
   "dependencies": {
-    "@haus-storefront/core": "1.0.5",
+    "@haus-storefront/core": "1.0.0",
     "@tanstack/react-query": "^5.74.3",
     "@tanstack/react-query-devtools": "^5.74.3",
     "@types/lodash": "^4.17.16",

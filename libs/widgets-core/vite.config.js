@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import dts from 'vite-plugin-dts';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   define: {
@@ -10,12 +11,14 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    nxViteTsPaths(),
     dts({
-      rollupTypes: true,
-      tsconfigPath: "./tsconfig.lib.json",
-  }),
+      entryRoot: 'src',
+      tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
+    }),
   ],
   build: {
+    emptyOutDir: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'WidgetsCore',

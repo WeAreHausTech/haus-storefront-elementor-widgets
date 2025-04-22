@@ -11,7 +11,7 @@
     "package": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cd libs/widgets-core && zip -r ../../dist/libs/widgets-core/widgets-core.zip *"
+        "command": "cd libs/widgets-core && zip -r ../../dist/libs/widgets-core/widgets-core-v1.0.0.zip *"
       },
       "dependsOn": ["build"]
     }

@@ -9,16 +9,18 @@ export default defineConfig({
   },
   plugins: [react()],
   build: {
+    manifest: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.tsx'),
       name: 'AddToCartButtonWidget',
-      fileName: (format) => `AddToCartButtonWidget.${format}.js`,
-      formats: ['es', 'umd'],
+      formats: ['es'],
     },
     rollupOptions: {
       output: {
         inlineDynamicImports: true, 
         manualChunks: undefined,
+        entryFileNames: 'AddToCartButtonWidget-[hash].js',
+
       },
     },
   },
