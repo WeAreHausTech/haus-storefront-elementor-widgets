@@ -1,6 +1,6 @@
 {
   "name": "@haus-storefront-elementor-widgets/add-to-cart-button",
-  "version": "2.0.0-0",
+  "version": "2.0.0",
   "scripts": {
     "build": "vite build"
   },
@@ -16,7 +16,7 @@
     "@haus-storefront/add-to-cart-btn": "1.0.0",
     "@haus-storefront/core": "1.0.0",
     "@haus-storefront/hooks": "1.0.0",
-    "@haus-storefront-elementor-widgets/widgets-core": "2.0.0-0"
+    "@haus-storefront-elementor-widgets/widgets-core": "2.0.0"
   },
   "devDependencies": {
     "ts-loader": "^9.5.2",
