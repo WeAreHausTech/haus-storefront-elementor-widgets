@@ -1,18 +1,12 @@
 {
   "name": "add-to-cart-button",
   "targets": {
-    "prebuild": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "cd libs/add-to-cart-button && yarn install"
-      }
-    },
     "package": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cd libs/add-to-cart-button zip -r ../../dist/libs/add-to-cart-button/add-to-cart-button-v1.0.0.zip *"
+        "command": "mkdir -p dist/add-to-cart-button && cd libs/add-to-cart-button && zip -r ../../dist/add-to-cart-button/add-to-cart-button-v1.0.0.zip *"
       },
-      "dependsOn": ["prebuild", "^build"]
+      "dependsOn": ["build"]
     }
   }
 }
