@@ -1,5 +1,27 @@
 {
   "packages": {
-    
+    "haus-storefront-elementor-widgets/add-to-cart-button": {
+      "v1.1.1": {
+        "name": "haus-storefront-elementor-widgets/add-to-cart-button",
+        "version": "v1.1.1",
+        "source": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git",
+          "type": "git",
+          "reference": "add-to-cart-button@v1.1.1"
+        },
+        "dist": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download/add-to-cart-button@v1.1.1/add-to-cart-button-v1.1.1.zip",
+          "type": "zip"
+        },
+        "require": {
+          "php": "^8.1"
+        },
+        "autoload": {
+          "psr-4": {
+            "HausStorefrontElementorWidgets\\": "src/"
+          }
+        }
+      }
+    }
   }
 }
