@@ -1,3 +1,9 @@
+## 1.1.3 (2025-04-22)
+
+### 🧱 Updated Dependencies
+
+- Updated widgets-core to 1.0.2
+
 ## 1.1.1 (2025-04-22)
 
 This was a version bump only for add-to-cart-button to align it with other projects, there were no code changes.
