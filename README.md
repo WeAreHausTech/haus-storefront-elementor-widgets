@@ -1,7 +1,5 @@
 # HausStorefrontElementorWidgets
 
-# Publishing a New Package
-
 ## Create new version
 
 ```bash
@@ -17,4 +15,10 @@ The GitHub Actions workflow will automatically trigger when a new tag is pushed.
 - Extract the library name and version from the tag.
 - Build and package the library.
 - Create a GitHub release and attach the package as a `.zip` file.
+
+## View Published Packages
+
+You can view the published packages here:
+[Published Packages](https://wearehaustech.github.io/haus-storefront-elementor-widgets/packages/)
+
 
