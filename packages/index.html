@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <h1>Packages</h1>
+    <h1>Available Packages</h1>
     <ul id="packages-list">
         <!-- Packages will be dynamically loaded here -->
     </ul>
@@ -61,15 +61,6 @@
                         link.href = versions[version].dist.url;
                         link.textContent = version;
                         link.download = '';
-
-                        // Add release notes if available
-                        const releaseNotes = versions[version].releaseNotes;
-                        if (releaseNotes) {
-                            const notes = document.createElement('p');
-                            notes.textContent = `Release Notes: ${releaseNotes}`;
-                            versionItem.appendChild(notes);
-                        }
-
                         versionItem.appendChild(link);
                         versionList.appendChild(versionItem);
                     });
