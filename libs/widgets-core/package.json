@@ -5,11 +5,11 @@
     "build": "vite build"
   },
   "main": "dist/bundle.es.js",
-  "types": "dist/bundle.d.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/bundle.es.js",
-      "types": "./dist/bundle.d.ts"
+      "types": "./dist/index.d.ts"
     }
   },
   "dependencies": {
