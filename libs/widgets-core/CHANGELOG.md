@@ -1,3 +1,13 @@
+## 1.1.1 (2025-04-23)
+
+### 🩹 Fixes
+
+- **release:** correct tag_name syntax in GitHub Release step ([7b1b23f](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/7b1b23f))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 1.1.0 (2025-04-23)
 
 ### 🩹 Fixes
