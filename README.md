@@ -1,24 +1,38 @@
 # HausStorefrontElementorWidgets
 
-## Create new version
+This repository contains the custom Elementor widgets used in the Haus Storefront. These widgets are packaged and released as a Composer-compatible `.zip` archive for easy distribution and reuse.
+
+---
+
+## 🚀 Releasing a New Version
+
+To publish a new version of the widget package, run the following command:
 
 ```bash
-    yarn nx release --projects=widget
+yarn nx release --projects=widget
 ```
 
 This will:
-1. Create a new version, tag and update release notes. 
-2. Trigger the GitHub Workflow
 
-###  GitHub Workflow
-The GitHub Actions workflow will automatically trigger when a new tag is pushed. The workflow will:
-- Extract the library name and version from the tag.
-- Build and package the library.
-- Create a GitHub release and attach the package as a `.zip` file.
+1. Bump the version number based on commit messages.
+2. Create a new Git tag and update the release notes.
+3. Trigger the GitHub Actions workflow for packaging and publishing.
 
-## View Published Packages
+---
 
-You can view the published packages here:
-[Published Packages](https://wearehaustech.github.io/haus-storefront-elementor-widgets/packages/)
+## ⚙️ GitHub Actions Workflow
 
+The GitHub Actions workflow is automatically triggered when a new tag is pushed. The workflow performs the following steps:
 
+- Extracts the library name and version from the tag.
+- Builds and packages the widget code.
+- Creates a new GitHub release and attaches the packaged `.zip` file.
+- Updates `packages.json` so the new version is available as a Composer package.
+
+---
+
+## 📦 Published Packages
+
+You can view and download the published widget packages here:
+
+👉 [Published Packages](https://wearehaustech.github.io/haus-storefront-elementor-widgets/packages/)
