@@ -22,6 +22,29 @@
           }
         }
       }
+    },
+    "haus-storefront-elementor-widgets/widgets-core": {
+      "v1.1.0": {
+        "name": "haus-storefront-elementor-widgets/widgets-core",
+        "version": "v1.1.0",
+        "source": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git",
+          "type": "git",
+          "reference": "widgets-core@v1.1.0"
+        },
+        "dist": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download/widgets-core@v1.1.0/widgets-core-v1.1.0.zip",
+          "type": "zip"
+        },
+        "require": {
+          "php": "^8.1"
+        },
+        "autoload": {
+          "psr-4": {
+            "HausStorefrontElementorWidgets\\": "src/"
+          }
+        }
+      }
     }
   }
 }
