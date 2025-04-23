@@ -1,3 +1,14 @@
+## 1.1.6 (2025-04-23)
+
+### 🩹 Fixes
+
+- **release:** correct tag_name syntax in GitHub Release step ([7b1b23f](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/7b1b23f))
+- **release): update tag_name to use github.ref_name for GitHub Release fix(widgets-core:** ensure directory creation before zipping package ([15d9d62](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/15d9d62))
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 1.1.5 (2025-04-23)
 
 ### 🩹 Fixes
