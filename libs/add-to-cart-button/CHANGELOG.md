@@ -1,3 +1,17 @@
+## 1.1.4 (2025-04-23)
+
+### 🩹 Fixes
+
+- **release): update tag_name to use github.ref_name for GitHub Release fix(widgets-core:** ensure directory creation before zipping package ([15d9d62](https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/commit/15d9d62))
+
+### 🧱 Updated Dependencies
+
+- Updated widgets-core to 1.1.0
+
+### ❤️ Thank You
+
+- Johanna Bertils
+
 ## 1.1.3 (2025-04-22)
 
 ### 🧱 Updated Dependencies
