@@ -5,7 +5,7 @@ import {
   vendureQueryClient,
 } from '@haus-storefront/core';
 import { BuilderQueryUpdates } from '@haus-storefront/shared-types';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, JSX } from 'react';
 import ReactDOM from 'react-dom/client';
 import { camelCase, debounce, set } from 'lodash';
 // import css from '@haus-tech/ecom-components/dist/ecom-style.css?raw'
@@ -145,10 +145,12 @@ export class WidgetsRenderer {
   }
 
   private renderElements(parentElement: ParentNode = document) {
-    console.log('widgets', this.widgets);
+    console.log('widgets 123', this.widgets);
     const elements: Element[] = Array.from(
       (parentElement as Element).getElementsByClassName('ecom-components-root')
     );
+
+    console.log('elements', elements);
 
     elements.forEach((element: Element) => {
       if (element.shadowRoot) {

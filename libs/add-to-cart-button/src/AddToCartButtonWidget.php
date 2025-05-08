@@ -70,10 +70,10 @@ class AddToCartButtonWidget extends Widget_Base
         }
 
         $distPath = HAUS_ECOM_PLUGIN_URI . 'vendor/haus-storefront-elementor-widgets/add-to-cart-button/dist';
-        $content = file_get_contents($distPath . '.vite/manifest.json');
+        $content = file_get_contents($distPath . '/.vite/manifest.json');
         $content = json_decode($content, true);
         $script = $content["src/index.tsx"]["file"];
-        $file = $distPath . $script;
+        $file = $distPath . '/' . $script;
 
         wp_enqueue_script(
             'haus-add-to-cart-widget',

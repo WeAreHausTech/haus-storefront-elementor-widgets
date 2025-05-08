@@ -4,6 +4,26 @@ This repository contains the custom Elementor widgets used in the Haus Storefron
 
 ---
 
+## Local Testing
+
+To use these Composer packages locally, replace the repository in `composer.json` for each package. For example:
+
+```json
+{
+  "type": "path",
+  "url": "../haus-storefront-elementor-widgets/libs/widgets-core",
+  "options": {
+    "symlink": true
+  }
+}
+```
+
+Then, include the package with the version in `composer.json`:
+
+```json
+"haus-storefront-elementor-widgets/add-to-cart-button": "1.0.1",
+```
+
 ## 🚀 Releasing a New Version
 
 To publish a new version of the widget package, run the following command:
