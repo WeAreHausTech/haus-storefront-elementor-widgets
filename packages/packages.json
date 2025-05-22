@@ -87,6 +87,29 @@
           }
         }
       }
+    },
+    "haus-storefront-elementor-widgets/orderlines": {
+      "v1.0.4": {
+        "name": "haus-storefront-elementor-widgets/orderlines",
+        "version": "v1.0.4",
+        "source": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets.git",
+          "type": "git",
+          "reference": "orderlines@v1.0.4"
+        },
+        "dist": {
+          "url": "https://github.com/WeAreHausTech/haus-storefront-elementor-widgets/releases/download/orderlines@v1.0.4/orderlines-v1.0.4.zip",
+          "type": "zip"
+        },
+        "require": {
+          "php": "^8.1"
+        },
+        "autoload": {
+          "psr-4": {
+            "HausStorefrontElementorWidgets\\": "src/"
+          }
+        }
+      }
     }
   }
 }
