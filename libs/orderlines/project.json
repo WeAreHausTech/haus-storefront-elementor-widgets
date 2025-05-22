@@ -1,5 +1,5 @@
 {
-  "name": "@haus-storefront-elementor-widgets/orderlines",
+  "name": "orderlines",
   "targets": {
     "package": {
       "executor": "nx:run-commands",
