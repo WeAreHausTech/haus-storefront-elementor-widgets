@@ -1,0 +1,11 @@
+{
+  "name": "@haus-storefront-elementor-widgets/orderlines",
+  "targets": {
+    "package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mkdir -p dist/libs/orderlines && cd libs/orderlines && VERSION=$(node -p \"require('./package.json').version\") && zip -r ../../dist/libs/orderlines/orderlines-v$VERSION.zip *"
+      }
+    }
+  }
+}
