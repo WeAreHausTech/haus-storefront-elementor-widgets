@@ -22,7 +22,6 @@ export interface WidgetConfig {
   js: string;
 }
 
-
 export interface ResourceBundle {
   lng: string;
   ns: string;
@@ -84,7 +83,7 @@ export class WidgetsRenderer {
     this.updates = updates;
     this.options = options;
     this.sdkInstance = sdkInstance;
-    this.widgets = { ...widgets};
+    this.widgets = { ...widgets };
 
     this.translations = translations || [];
     this.customComponents = customComponents || [];
