@@ -15,7 +15,7 @@ class Orderlines extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Order Lines from storefront', 'haus-ecom-widgets');
+        return esc_html__('Order Lines', 'haus-ecom-widgets');
     }
 
     public function get_icon()
